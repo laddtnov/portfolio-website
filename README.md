@@ -10,6 +10,7 @@ you can see the live version of this project here:
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Responsive](https://img.shields.io/badge/Responsive-Design-blueviolet?style=for-the-badge)
 ![freeCodeCamp](https://img.shields.io/badge/freeCodeCamp-Certified-0A0A23?style=for-the-badge&logo=freecodecamp&logoColor=white)
+![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
 
 A modern, cyberpunk-themed portfolio website showcasing my web development projects and skills.
 
