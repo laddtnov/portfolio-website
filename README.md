@@ -10,11 +10,10 @@ you can see the live version of this project here:
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Responsive](https://img.shields.io/badge/Responsive-Design-blueviolet?style=for-the-badge)
 ![freeCodeCamp](https://img.shields.io/badge/freeCodeCamp-Certified-0A0A23?style=for-the-badge&logo=freecodecamp&logoColor=white)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d28da10d-43fb-4c1d-bc08-303ac8e5af1c/deploy-status)](https://app.netlify.com/projects/laddtnov-dev/deploys)
 
 A modern, cyberpunk-themed portfolio website showcasing my web development projects and skills.
 
-🌐 **[Live Demo](https://laddtnov-dev.netlify.app/)** | 📁 **[Source Code](https://laddtnov-dev.netlify.app/)**
+🌐 **[Live Demo](https://portfolio-website-six-wine-21.vercel.app/)** | 📁 **[Source Code](https://portfolio-website-six-wine-21.vercel.app/)**
 
 ![Portfolio Preview](Screenshot-1.png)
 
