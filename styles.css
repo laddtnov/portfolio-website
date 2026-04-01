@@ -42,7 +42,7 @@ body {
   width: 100%;
   background: rgba(10, 10, 12, 0.95);
   backdrop-filter: blur(10px);
-  padding: 20px 50px;
+  padding: 10px 50px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,6 +59,11 @@ body {
 .nav-links {
   display: flex;
   gap: 30px;
+}
+.nav-right-group {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 .nav-links a {
   font-family: 'Share Tech Mono', monospace;
@@ -526,26 +531,39 @@ body {
 /* Nav CV Button */
 .nav-cv-btn {
   font-family: 'Orbitron', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 0.85rem;
-  font-weight: 700;
-  color: #000;
-  background: var(--neon-cyan);
-  padding: 8px 18px;
+  font-weight: 600;
+  color: var(--neon-cyan); 
+  padding: 4px 12px; 
   border-radius: 4px;
   text-decoration: none;
   transition: all 0.3s;
-  box-shadow: 0 0 10px rgba(0, 242, 255, 0.4);
-  letter-spacing: 0.05em;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1; 
 }
 
 .nav-cv-btn:hover {
-  background: var(--neon-pink);
-  box-shadow: 0 0 20px var(--neon-pink);
-  transform: translateY(-2px);
+  color: var(--neon-pink); 
+  text-shadow: 0 0 10px var(--neon-pink);
+  transform: translateY(-1px);
 }
 
 .nav-cv-btn::after {
-  display: none;
+  content: '';
+  position: absolute;
+  bottom: 2px; 
+  height: 2px;
+  background: var(--neon-pink);
+  transition: width 0.3s ease;
+  width: 0;
+}
+.nav-cv-btn:hover::after {
+  width: calc(100% - 24px); 
 }
 
 /* CV Download Section (bottom) */
@@ -559,22 +577,54 @@ body {
   font-size: 1.3rem;
 }
 
-/* Media Queries */
+
+/* --- Media Queries & Responsiveness --- */
+
+/* Tablet View: Adjusting spacing for mid-sized screens (e.g., iPads) */
+@media (max-width: 992px) {
+  #navbar {
+    padding: 10px 20px;
+  }
+  .nav-right-group {
+    gap: 20px;
+  }
+}
+
+/* Mobile View: Switching navigation to a vertical stack */
 @media (max-width: 768px) {
   #navbar {
     flex-direction: column;
-    padding: 15px 20px;
-    gap: 15px;
+    padding: 20px;
+    height: auto;
+    gap: 20px;
+    text-align: center;
   }
   
+  /* Stack nav links vertically */
   .nav-links {
+    flex-direction: column;
     gap: 15px;
+    width: 100%;
   }
-  
+
+  /* Ensure the CV button and links are centered in mobile mode */
+  .nav-right-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  /* Full-width CV button for better mobile UX */
+  .nav-cv-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
   .nav-links a {
     font-size: 0.95rem;
   }
   
+  /* Responsive Typography: Reducing font sizes for smaller viewports */
   .glitch-title {
     font-size: 3rem;
   }
@@ -587,17 +637,20 @@ body {
     font-size: 2rem;
   }
   
+  /* Projects Grid: Switching to a single-column layout */
   .projects-grid {
     grid-template-columns: 1fr;
-    padding: 0 20px;
+    padding: 0 10px;
   }
   
+  /* Reducing section padding to save vertical space */
   #projects,
   #skills,
   #contact {
-    padding: 80px 20px;
+    padding: 60px 20px;
   }
   
+  /* Contact section layout adjustments */
   .contact-links {
     flex-direction: column;
     align-items: center;
@@ -607,18 +660,23 @@ body {
     width: 100%;
     max-width: 300px;
   }
-}
+} 
 
+/* Small Mobile Devices: Final tweaks for very narrow screens */
 @media (max-width: 480px) {
   .glitch-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   
   .welcome-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   
   .section-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+
+  #navbar {
+    padding: 15px 10px;
   }
 }
