@@ -1,0 +1,108 @@
+/* --- Media Queries & Responsiveness --- */
+
+/* Tablet View: Adjusting spacing for mid-sized screens (e.g., iPads) */
+@media (max-width: 992px) {
+  #navbar {
+    padding: 10px 20px;
+  }
+  .nav-right-group {
+    gap: 20px;
+  }
+}
+
+/* Mobile View: Switching navigation to a vertical stack */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  /* Stack nav links vertically */
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  /* Ensure the CV button and links are centered in mobile mode */
+  .nav-right-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  /* Compact CV button on mobile — stands out from nav links */
+  .nav-cv-btn {
+    width: auto;
+    max-width: 180px;
+    margin: 0 auto;
+    justify-content: center;
+    font-size: 0.75rem;
+    padding: 6px 16px;
+    border: 1px solid var(--neon-cyan);
+    border-radius: 4px;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+  
+  /* Responsive Typography: Reducing font sizes for smaller viewports */
+  .glitch-title {
+    font-size: 3rem;
+  }
+  
+  .welcome-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  /* Projects Grid: Switching to a single-column layout */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+  
+  /* Reducing section padding to save vertical space */
+  #projects,
+  #skills,
+  #contact {
+    padding: 60px 20px;
+  }
+  
+  /* Contact section layout adjustments */
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+} 
+
+/* Small Mobile Devices: Final tweaks for very narrow screens */
+@media (max-width: 480px) {
+  .glitch-title {
+    font-size: 2.2rem;
+  }
+  
+  .welcome-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  #navbar {
+    padding: 15px 10px;
+  }
+}

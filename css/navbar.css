@@ -1,0 +1,114 @@
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10, 10, 12, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 10px 50px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 2px solid var(--neon-cyan);
+  box-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
+}
+
+.nav-logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--neon-cyan);
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-right-group {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-links a {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--neon-cyan);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--neon-pink);
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: var(--neon-pink);
+  text-shadow: 0 0 10px var(--neon-pink);
+}
+
+.glitch {
+  position: relative;
+  color: var(--neon-cyan);
+  animation: glitch-skew 1s infinite;
+}
+
+@keyframes glitch-skew {
+  0% { transform: skew(0deg); }
+  20% { transform: skew(0deg); }
+  21% { transform: skew(2deg); }
+  22% { transform: skew(0deg); }
+  100% { transform: skew(0deg); }
+}
+
+/* Nav CV Button */
+.nav-cv-btn {
+  font-family: 'Orbitron', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--neon-cyan); 
+  padding: 4px 12px; 
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1; 
+}
+
+.nav-cv-btn:hover {
+  color: var(--neon-pink); 
+  text-shadow: 0 0 10px var(--neon-pink);
+  transform: translateY(-1px);
+}
+
+.nav-cv-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 2px; 
+  height: 2px;
+  background: var(--neon-pink);
+  transition: width 0.3s ease;
+  width: 0;
+}
+
+.nav-cv-btn:hover::after {
+  width: calc(100% - 24px); 
+}
