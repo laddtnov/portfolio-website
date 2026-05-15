@@ -60,6 +60,15 @@
   text-shadow: 0 0 10px var(--neon-pink);
 }
 
+.nav-links a[aria-current="location"] {
+  color: var(--neon-pink);
+  text-shadow: 0 0 10px var(--neon-pink);
+}
+
+.nav-links a[aria-current="location"]::after {
+  width: 100%;
+}
+
 .glitch {
   position: relative;
   color: var(--neon-cyan);

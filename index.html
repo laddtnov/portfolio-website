@@ -31,12 +31,13 @@
   <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-  <div class="cyber-grid"></div>
-  <div class="status-indicator">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="cyber-grid" aria-hidden="true"></div>
+  <div class="status-indicator" aria-hidden="true">
     <span class="status-dot"></span>
     <span class="status-text">SYSTEM: ONLINE // ENCRYPTED CONNECTION</span>
   </div>
-  <nav id="navbar">
+  <nav id="navbar" aria-label="Primary">
     <div class="nav-logo">
       <span class="glitch" data-text="<DEV>">&lt;DEV&gt;</span>
 </div>
@@ -48,22 +49,23 @@
       <a href="cv-vladislav-novytskiy.pdf" download class="nav-cv-btn">Download CV ↓</a>
     </div>
   </nav>
-  <section id="welcome-section">
+  <main id="main-content">
+  <section id="welcome-section" aria-labelledby="hero-title">
     <div class="welcome-content">
       <p class="welcome-prefix">&gt;_ Hello World</p>
-      <h1 class="glitch-title" data-text="I'M LADDTNOV">I'M LADDTNOV</h1>
+      <h1 id="hero-title" class="glitch-title" data-text="I'M LADDTNOV">I'M LADDTNOV</h1>
       <p class="welcome-subtitle">
         <span class="typing">FRONT-END DEVELOPER</span>
       </p>
       <p class="welcome-tagline">Building the future, one line of code at a time</p>
-      <div class="scroll-indicator">
+      <div class="scroll-indicator" aria-hidden="true">
         <span>↓</span>
         <p>Scroll to explore</p>
       </div>
     </div>
   </section>
-  <section id="projects">
-    <h2 class="section-title">
+  <section id="projects" aria-labelledby="projects-title">
+    <h2 id="projects-title" class="section-title">
       <span class="title-bracket">[</span>
       FEATURED PROJECTS
       <span class="title-bracket">]</span>
@@ -71,7 +73,7 @@
     <div class="projects-grid">
       
       <!-- Project 1: Solar System -->
-      <a href="https://solar.laddtnov.xyz/" class="project-tile" target="_blank" rel="noopener noreferrer">
+      <a href="https://solar.laddtnov.xyz/" class="project-tile" target="_blank" rel="noopener noreferrer" aria-label="Open Solar System project in a new tab">
         <div class="project-image">
           <img src="https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=400" alt="Solar System">
           <div class="project-overlay">
@@ -86,7 +88,7 @@
       </a>
 
       <!-- Project 2: Libra -->
-      <a href="https://libra.laddtnov.xyz/" class="project-tile" target="_blank" rel="noopener noreferrer">
+      <a href="https://libra.laddtnov.xyz/" class="project-tile" target="_blank" rel="noopener noreferrer" aria-label="Open Libra project in a new tab">
         <div class="project-image">
           <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=400" alt="Libra">
           <div class="project-overlay">
@@ -101,7 +103,7 @@
       </a>
 
       <!-- Project 3: Breach OS -->
-      <a href="https://breachos.laddtnov.xyz/" class="project-tile" target="_blank" rel="noopener noreferrer">
+      <a href="https://breachos.laddtnov.xyz/" class="project-tile" target="_blank" rel="noopener noreferrer" aria-label="Open Breach OS project in a new tab">
         <div class="project-image">
           <img src="playing-cards-screenshot.png" alt="Breach OS">
           <div class="project-overlay">
@@ -116,7 +118,7 @@
       </a>
 
       <!-- Project 4: Breach Engine -->
-      <a href="https://breach-engine.laddtnov.xyz/" class="project-tile" target="_blank" rel="noopener noreferrer">
+      <a href="https://breach-engine.laddtnov.xyz/" class="project-tile" target="_blank" rel="noopener noreferrer" aria-label="Open Breach Engine project in a new tab">
         <div class="project-image">
           <img src="breach-engine-screenshot.png" alt="Breach Engine - Steampunk Sudoku">
           <div class="project-overlay">
@@ -131,7 +133,7 @@
       </a>
 
       <!-- Project 5: GEA776 -->
-      <a href="https://gea776.laddtnov.xyz/" class="project-tile" target="_blank" rel="noopener noreferrer">
+      <a href="https://gea776.laddtnov.xyz/" class="project-tile" target="_blank" rel="noopener noreferrer" aria-label="Open GEA776 project in a new tab">
         <div class="project-image">
           <img src="gea776-screenshot.png" alt="GEA776 Project">
           <div class="project-overlay">
@@ -146,7 +148,7 @@
       </a>
 
       <!-- Project 6: Glass Chess -->
-      <a href="https://glass-chess.bynov.one/" class="project-tile" target="_blank" rel="noopener noreferrer">
+      <a href="https://glass-chess.bynov.one/" class="project-tile" target="_blank" rel="noopener noreferrer" aria-label="Open Glass Chess project in a new tab">
         <div class="project-image">
           <img src="https://images.unsplash.com/photo-1586165368502-1bad197a6461?w=400" alt="Glass Chess">
           <div class="project-overlay">
@@ -162,8 +164,8 @@
       
     </div>
   </section>
-  <section id="skills">
-    <h2 class="section-title">
+  <section id="skills" aria-labelledby="skills-title">
+    <h2 id="skills-title" class="section-title">
       <span class="title-bracket">[</span>
       TECH STACK
       <span class="title-bracket">]</span>
@@ -211,8 +213,8 @@
       </div>
     </div>
   </section>
-  <section id="contact">
-    <h2 class="section-title">
+  <section id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title" class="section-title">
       <span class="title-bracket">[</span>
       LET'S CONNECT
       <span class="title-bracket">]</span>
@@ -252,5 +254,7 @@
   <p>© 2026 Laddtnov</p>
     </div>
   </section>
+  </main>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
