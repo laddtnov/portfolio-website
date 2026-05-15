@@ -1,6 +1,6 @@
 # Laddtnov Portfolio
 
-Cyberpunk-style portfolio built with semantic HTML5, modular CSS, and vanilla JavaScript (ES modules).
+Cyberpunk-style front-end portfolio built with semantic HTML5, modular CSS, and vanilla JavaScript (ES modules), featuring a project explorer with filters, sorting, and inspect modal.
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-00f2ff?style=for-the-badge&logo=vercel&logoColor=000000)](https://laddtnov.xyz/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML)
@@ -8,6 +8,8 @@ Cyberpunk-style portfolio built with semantic HTML5, modular CSS, and vanilla Ja
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-f7df1e?style=for-the-badge&logo=javascript&logoColor=000000)](https://developer.mozilla.org/docs/Web/JavaScript)
 [![Accessibility](https://img.shields.io/badge/A11y-Improved-ff00ff?style=for-the-badge)](https://www.w3.org/WAI/)
 [![Reduced Motion](https://img.shields.io/badge/Prefers--Reduced--Motion-Supported-9d00ff?style=for-the-badge)](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-motion)
+[![Project Explorer](https://img.shields.io/badge/Project%20Explorer-Filters%20%2B%20Modal-00f2ff?style=for-the-badge)](https://laddtnov.xyz/)
+[![Performance](https://img.shields.io/badge/Performance-Lazy%20Images%20%2B%20Local%20Thumbs-ff00ff?style=for-the-badge)](https://developer.mozilla.org/docs/Web/Performance)
 
 ![Portfolio Preview](Screenshot-1.png)
 
@@ -21,12 +23,12 @@ Cyberpunk-style portfolio built with semantic HTML5, modular CSS, and vanilla Ja
 - Cyberpunk UI with neon glow, glitch accents, and terminal-inspired layout
 - Fully responsive sections for desktop/tablet/mobile
 - SEO and social meta tags (Open Graph + Twitter)
-- Accessibility upgrades:
-  - Skip-to-content link
-  - Landmark and section labeling
-  - Better keyboard focus visibility
+- Project Explorer upgrades: category filters, sorting, and inspect modal
+- Local optimized thumbnail pipeline for faster project grid rendering
+- Lazy-loaded project images with async decoding
+- Accessibility upgrades: skip-to-content link, semantic landmarks, stronger keyboard focus
 - Reduced-motion support via `prefers-reduced-motion`
-- Modular front-end architecture with ES modules + event bus
+- Modular front-end architecture with ES modules + event bus events
 
 ## Stack
 
@@ -56,6 +58,14 @@ My-Portfolio-Page/
 │   ├── motion.js
 │   ├── ui.js
 │   └── projects.js
+├── assets/
+│   └── thumbnails/
+│       ├── solar-system-thumb.svg
+│       ├── libra-thumb.svg
+│       ├── breach-os-thumb.jpg
+│       ├── breach-engine-thumb.jpg
+│       ├── gea776-thumb.jpg
+│       └── glass-chess-thumb.svg
 └── README.md
 ```
 
