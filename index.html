@@ -28,7 +28,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/welcome.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/skills.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
   </head>
   <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -70,99 +77,181 @@
       FEATURED PROJECTS
       <span class="title-bracket">]</span>
     </h2>
+
+    <div class="projects-explorer" aria-label="Project explorer controls">
+      <div class="filter-group" role="group" aria-label="Filter projects">
+        <button class="filter-btn is-active" type="button" data-filter="all">ALL</button>
+        <button class="filter-btn" type="button" data-filter="game">GAMES</button>
+        <button class="filter-btn" type="button" data-filter="tool">TOOLS</button>
+        <button class="filter-btn" type="button" data-filter="experiment">EXPERIMENTS</button>
+      </div>
+      <label class="sort-wrap" for="project-sort">
+        <span>SORT:</span>
+        <select id="project-sort" class="sort-select">
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="name">Name A-Z</option>
+        </select>
+      </label>
+    </div>
+
     <div class="projects-grid">
-      
       <!-- Project 1: Solar System -->
-      <a href="https://solar.laddtnov.xyz/" class="project-tile" target="_blank" rel="noopener noreferrer" aria-label="Open Solar System project in a new tab">
+      <article
+        class="project-tile"
+        data-category="experiment"
+        data-year="2026"
+        data-summary="3D solar system with Fallout 3 inspired terminal interactions and sound."
+      >
         <div class="project-image">
-          <img src="https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=400" alt="Solar System">
+          <img src="assets/thumbnails/solar-system-thumb.svg" alt="Solar System project preview" loading="lazy" decoding="async">
           <div class="project-overlay">
-            <span class="view-project">VIEW PROJECT →</span>
+            <span class="view-project">TERMINAL READY</span>
           </div>
         </div>
         <div class="project-info">
           <h3>Solar System</h3>
           <p class="project-tech">CSS Animations • Fallout Terminal • Web Audio API</p>
           <p class="project-desc">3D solar system with Fallout 3-style terminal and typewriter sounds</p>
+          <div class="project-actions">
+            <a href="https://solar.laddtnov.xyz/" class="project-visit-btn" target="_blank" rel="noopener noreferrer" aria-label="Open Solar System project in a new tab">Visit</a>
+            <button type="button" class="project-inspect-btn">Inspect</button>
+          </div>
         </div>
-      </a>
+      </article>
 
       <!-- Project 2: Libra -->
-      <a href="https://libra.laddtnov.xyz/" class="project-tile" target="_blank" rel="noopener noreferrer" aria-label="Open Libra project in a new tab">
+      <article
+        class="project-tile"
+        data-category="tool"
+        data-year="2026"
+        data-summary="Book tracking app with terminal visuals, neon panels, and progress modules."
+      >
         <div class="project-image">
-          <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=400" alt="Libra">
+          <img src="assets/thumbnails/libra-thumb.svg" alt="Libra project preview" loading="lazy" decoding="async">
           <div class="project-overlay">
-            <span class="view-project">VIEW PROJECT →</span>
+            <span class="view-project">TERMINAL READY</span>
           </div>
         </div>
         <div class="project-info">
           <h3>Libra</h3>
           <p class="project-tech">Neon Design • Fallout Terminal • Progress Tracking</p>
           <p class="project-desc">Futuristic book tracking with terminal interface and sound effects</p>
+          <div class="project-actions">
+            <a href="https://libra.laddtnov.xyz/" class="project-visit-btn" target="_blank" rel="noopener noreferrer" aria-label="Open Libra project in a new tab">Visit</a>
+            <button type="button" class="project-inspect-btn">Inspect</button>
+          </div>
         </div>
-      </a>
+      </article>
 
       <!-- Project 3: Breach OS -->
-      <a href="https://breachos.laddtnov.xyz/" class="project-tile" target="_blank" rel="noopener noreferrer" aria-label="Open Breach OS project in a new tab">
+      <article
+        class="project-tile"
+        data-category="game"
+        data-year="2025"
+        data-summary="Cyberpunk memory game with mission loops, animations, and arcade progression."
+      >
         <div class="project-image">
-          <img src="playing-cards-screenshot.png" alt="Breach OS">
+          <img src="assets/thumbnails/breach-os-thumb.jpg" alt="Breach OS project preview" loading="lazy" decoding="async">
           <div class="project-overlay">
-            <span class="view-project">VIEW PROJECT →</span>
+            <span class="view-project">TERMINAL READY</span>
           </div>
         </div>
         <div class="project-info">
           <h3>Breach OS</h3>
           <p class="project-tech">JavaScript • CSS Animations • Game Logic</p>
           <p class="project-desc">Cyberpunk-themed memory card game with missions and neon effects</p>
+          <div class="project-actions">
+            <a href="https://breachos.laddtnov.xyz/" class="project-visit-btn" target="_blank" rel="noopener noreferrer" aria-label="Open Breach OS project in a new tab">Visit</a>
+            <button type="button" class="project-inspect-btn">Inspect</button>
+          </div>
         </div>
-      </a>
+      </article>
 
       <!-- Project 4: Breach Engine -->
-      <a href="https://breach-engine.laddtnov.xyz/" class="project-tile" target="_blank" rel="noopener noreferrer" aria-label="Open Breach Engine project in a new tab">
+      <article
+        class="project-tile"
+        data-category="game tool"
+        data-year="2025"
+        data-summary="Steampunk sudoku with rank systems, survival mode, and PWA install support."
+      >
         <div class="project-image">
-          <img src="breach-engine-screenshot.png" alt="Breach Engine - Steampunk Sudoku">
+          <img src="assets/thumbnails/breach-engine-thumb.jpg" alt="Breach Engine project preview" loading="lazy" decoding="async">
           <div class="project-overlay">
-            <span class="view-project">VIEW PROJECT →</span>
+            <span class="view-project">TERMINAL READY</span>
           </div>
         </div>
         <div class="project-info">
           <h3>Breach Engine — Steampunk Sudoku</h3>
           <p class="project-tech">JavaScript • PWA • Steampunk Design</p>
           <p class="project-desc">Steampunk-themed Sudoku with rank system, survival mode and nixie tube UI</p>
+          <div class="project-actions">
+            <a href="https://breach-engine.laddtnov.xyz/" class="project-visit-btn" target="_blank" rel="noopener noreferrer" aria-label="Open Breach Engine project in a new tab">Visit</a>
+            <button type="button" class="project-inspect-btn">Inspect</button>
+          </div>
         </div>
-      </a>
+      </article>
 
       <!-- Project 5: GEA776 -->
-      <a href="https://gea776.laddtnov.xyz/" class="project-tile" target="_blank" rel="noopener noreferrer" aria-label="Open GEA776 project in a new tab">
+      <article
+        class="project-tile"
+        data-category="experiment"
+        data-year="2024"
+        data-summary="Creative interactive frontend experiment with modern effects and layout systems."
+      >
         <div class="project-image">
-          <img src="gea776-screenshot.png" alt="GEA776 Project">
+          <img src="assets/thumbnails/gea776-thumb.jpg" alt="GEA776 project preview" loading="lazy" decoding="async">
           <div class="project-overlay">
-            <span class="view-project">VIEW PROJECT →</span>
+            <span class="view-project">TERMINAL READY</span>
           </div>
         </div>
         <div class="project-info">
           <h3>GEA776 Project</h3>
           <p class="project-tech">Creative Design • Modern Web • Interactive</p>
           <p class="project-desc">Interactive web project with creative design and modern technologies</p>
+          <div class="project-actions">
+            <a href="https://gea776.laddtnov.xyz/" class="project-visit-btn" target="_blank" rel="noopener noreferrer" aria-label="Open GEA776 project in a new tab">Visit</a>
+            <button type="button" class="project-inspect-btn">Inspect</button>
+          </div>
         </div>
-      </a>
+      </article>
 
       <!-- Project 6: Glass Chess -->
-      <a href="https://glass-chess.bynov.one/" class="project-tile" target="_blank" rel="noopener noreferrer" aria-label="Open Glass Chess project in a new tab">
+      <article
+        class="project-tile"
+        data-category="game experiment"
+        data-year="2024"
+        data-summary="Glassmorphism chess experience focused on elegant visuals and smooth piece motion."
+      >
         <div class="project-image">
-          <img src="https://images.unsplash.com/photo-1586165368502-1bad197a6461?w=400" alt="Glass Chess">
+          <img src="assets/thumbnails/glass-chess-thumb.svg" alt="Glass Chess project preview" loading="lazy" decoding="async">
           <div class="project-overlay">
-            <span class="view-project">VIEW PROJECT →</span>
+            <span class="view-project">TERMINAL READY</span>
           </div>
         </div>
         <div class="project-info">
           <h3>Glass Chess</h3>
           <p class="project-tech">JavaScript • CSS Glassmorphism • Game Logic</p>
           <p class="project-desc">Elegant glass-themed chess game with smooth animations</p>
+          <div class="project-actions">
+            <a href="https://glass-chess.bynov.one/" class="project-visit-btn" target="_blank" rel="noopener noreferrer" aria-label="Open Glass Chess project in a new tab">Visit</a>
+            <button type="button" class="project-inspect-btn">Inspect</button>
+          </div>
         </div>
-      </a>
-      
+      </article>
     </div>
+
+    <dialog class="project-modal" id="project-modal" aria-labelledby="project-modal-title">
+      <button type="button" class="project-modal-close" aria-label="Close project details">×</button>
+      <p class="project-modal-label">PROJECT INSPECT</p>
+      <h3 id="project-modal-title"></h3>
+      <p class="project-modal-tech" id="project-modal-tech"></p>
+      <p class="project-modal-desc" id="project-modal-desc"></p>
+      <p class="project-modal-summary" id="project-modal-summary"></p>
+      <div class="project-modal-actions">
+        <a id="project-modal-link" class="project-visit-btn" href="#" target="_blank" rel="noopener noreferrer">Open Live Project</a>
+      </div>
+    </dialog>
   </section>
   <section id="skills" aria-labelledby="skills-title">
     <h2 id="skills-title" class="section-title">

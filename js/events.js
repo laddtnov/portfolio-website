@@ -5,6 +5,10 @@ export const EVENTS = {
   NAV_SECTION_CHANGED: "app:nav-section-changed",
   PROJECT_FOCUSED: "app:project-focused",
   PROJECT_OPENED: "app:project-opened",
+  PROJECT_FILTER_CHANGED: "app:project-filter-changed",
+  PROJECT_SORT_CHANGED: "app:project-sort-changed",
+  PROJECT_MODAL_OPENED: "app:project-modal-opened",
+  PROJECT_MODAL_CLOSED: "app:project-modal-closed",
 };
 
 export function emit(type, detail = {}) {

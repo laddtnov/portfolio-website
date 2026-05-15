@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="t d">
+  <title id="t">Solar System thumbnail</title>
+  <desc id="d">Neon cyberpunk styled solar system scene.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#040406"/>
+    </radialGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffef8a"/>
+      <stop offset="100%" stop-color="#ff6a00"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g opacity="0.32" stroke="#00f2ff" fill="none">
+    <ellipse cx="640" cy="340" rx="150" ry="84"/>
+    <ellipse cx="640" cy="340" rx="240" ry="136"/>
+    <ellipse cx="640" cy="340" rx="330" ry="188"/>
+  </g>
+  <circle cx="640" cy="340" r="64" fill="url(#sun)"/>
+  <circle cx="486" cy="320" r="10" fill="#9d00ff"/>
+  <circle cx="768" cy="402" r="14" fill="#00f2ff"/>
+  <circle cx="915" cy="308" r="18" fill="#ff00ff"/>
+  <text x="58" y="594" fill="#00f2ff" font-family="'Share Tech Mono', monospace" font-size="56">SOLAR SYSTEM</text>
+</svg>
