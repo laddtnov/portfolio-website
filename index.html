@@ -354,6 +354,35 @@
     </div>
   </section>
   </main>
+  <div class="settings-panel" id="settings-panel">
+    <button
+      class="settings-toggle"
+      id="settings-toggle"
+      type="button"
+      aria-label="Toggle system settings"
+      aria-expanded="false"
+      aria-controls="settings-content"
+    >⚙</button>
+    <div class="settings-content" id="settings-content" hidden>
+      <p class="settings-label">[ SYSTEM SETTINGS ]</p>
+      <div class="settings-group">
+        <span class="settings-group-label">CRT</span>
+        <div class="settings-options" role="group" aria-label="CRT intensity">
+          <button type="button" class="setting-btn is-active" data-setting="crt" data-value="0">OFF</button>
+          <button type="button" class="setting-btn" data-setting="crt" data-value="0.4">LOW</button>
+          <button type="button" class="setting-btn" data-setting="crt" data-value="1">HIGH</button>
+        </div>
+      </div>
+      <div class="settings-group">
+        <span class="settings-group-label">MOTION</span>
+        <div class="settings-options" role="group" aria-label="Motion intensity">
+          <button type="button" class="setting-btn is-active" data-setting="motion" data-value="full">FULL</button>
+          <button type="button" class="setting-btn" data-setting="motion" data-value="reduced">LOW</button>
+          <button type="button" class="setting-btn" data-setting="motion" data-value="off">OFF</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
