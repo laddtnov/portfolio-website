@@ -16,9 +16,6 @@ function init() {
     document.body.dataset.activeSection = sectionId;
   });
 
-  on(EVENTS.MOTION_CHANGED, ({ reduced }) => {
-    document.body.dataset.motion = reduced ? 'reduced' : 'full';
-  });
 }
 
 if (document.readyState === 'loading') {
