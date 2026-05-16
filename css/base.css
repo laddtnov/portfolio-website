@@ -5,6 +5,7 @@
   --dark-bg: #0a0a0c;
   --dark-card: #151518;
   --text-gray: #d1d1d1;
+  --crt-intensity: 0;
 }
 
 * {
@@ -102,4 +103,21 @@ button:focus-visible,
   .scroll-indicator {
     animation: none !important;
   }
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.15) 2px,
+    rgba(0, 0, 0, 0.15) 4px
+  );
+  opacity: var(--crt-intensity);
+  pointer-events: none;
+  z-index: 9998;
+  transition: opacity 0.4s ease;
 }
