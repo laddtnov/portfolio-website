@@ -248,3 +248,11 @@
   display: flex;
   justify-content: flex-start;
 }
+
+.project-metrics {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.78rem;
+  color: rgba(0, 242, 255, 0.6);
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+}
