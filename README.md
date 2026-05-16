@@ -1,155 +1,102 @@
-# Personal Portfolio Website 💼
-My personal portfolio website built with HTML5, CSS3, and animations. Cyberpunk-themed design showcasing my projects and skills.
-you can see the live version of this project here: 
-👉 ** https://laddtnov.xyz/**
+# Laddtnov Portfolio
 
-<div align="center">
+Cyberpunk-style front-end portfolio built with semantic HTML5, modular CSS, and vanilla JavaScript (ES modules), featuring a project explorer with filters, sorting, and inspect modal.
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Responsive](https://img.shields.io/badge/Responsive-Design-blueviolet?style=for-the-badge)
-![freeCodeCamp](https://img.shields.io/badge/freeCodeCamp-Certified-0A0A23?style=for-the-badge&logo=freecodecamp&logoColor=white)
-
-A modern, cyberpunk-themed portfolio website showcasing my web development projects and skills.
-
-🌐 **[Live Demo](https://laddtnov.xyz/)** | 📁 **[Source Code](https://laddtnov.xyz/)**
+[![Live Demo](https://img.shields.io/badge/Live-Demo-00f2ff?style=for-the-badge&logo=vercel&logoColor=000000)](https://laddtnov.xyz/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-f7df1e?style=for-the-badge&logo=javascript&logoColor=000000)](https://developer.mozilla.org/docs/Web/JavaScript)
+[![Accessibility](https://img.shields.io/badge/A11y-Improved-ff00ff?style=for-the-badge)](https://www.w3.org/WAI/)
+[![Reduced Motion](https://img.shields.io/badge/Prefers--Reduced--Motion-Supported-9d00ff?style=for-the-badge)](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-motion)
+[![Project Explorer](https://img.shields.io/badge/Project%20Explorer-Filters%20%2B%20Modal-00f2ff?style=for-the-badge)](https://laddtnov.xyz/)
+[![Performance](https://img.shields.io/badge/Performance-Lazy%20Images%20%2B%20Local%20Thumbs-ff00ff?style=for-the-badge)](https://developer.mozilla.org/docs/Web/Performance)
 
 ![Portfolio Preview](Screenshot-1.png)
 
-</div>
+## Live Links
 
----
+- Live site: [laddtnov.xyz](https://laddtnov.xyz/)
+- Source repository: [laddtnov/laddtnov-hub](https://github.com/laddtnov/laddtnov-hub)
 
-## ✨ Features
+## Features
 
-🎨 **Cyberpunk Design** - Neon colors, glitch effects, and animated grid background  
-📱 **Fully Responsive** - Works seamlessly on desktop, tablet, and mobile  
-⚡ **Smooth Animations** - CSS keyframe animations and transitions  
-🎯 **Interactive UI** - Hover effects and animated elements  
-🧹 **Clean Code** - Well-structured HTML and CSS with custom properties
+- Cyberpunk UI with neon glow, glitch accents, and terminal-inspired layout
+- Fully responsive sections for desktop/tablet/mobile
+- SEO and social meta tags (Open Graph + Twitter)
+- Project Explorer upgrades: category filters, sorting, and inspect modal
+- Local optimized thumbnail pipeline for faster project grid rendering
+- Lazy-loaded project images with async decoding
+- Accessibility upgrades: skip-to-content link, semantic landmarks, stronger keyboard focus
+- Reduced-motion support via `prefers-reduced-motion`
+- Modular front-end architecture with ES modules + event bus events
 
-## 🚀 Technologies Used
+## Stack
 
-<table>
-  <tr>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=html" width="48" height="48" alt="HTML5" />
-      <br>HTML5
-    </td>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=css" width="48" height="48" alt="CSS3" />
-      <br>CSS3
-    </td>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=git" width="48" height="48" alt="Git" />
-      <br>Git
-    </td>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=github" width="48" height="48" alt="GitHub" />
-      <br>GitHub
-    </td>
-  </tr>
-</table>
+- HTML5 (semantic structure)
+- CSS3 (modular stylesheets and CSS custom properties)
+- Vanilla JavaScript (ES modules, no heavy framework)
+- Google Fonts: Orbitron, Rajdhani, Share Tech Mono
 
-### Core Technologies
-- ✅ **HTML5** - Semantic markup
-- ✅ **CSS3** - Modern styling
-  - CSS Grid & Flexbox
-  - CSS Variables (Custom Properties)
-  - CSS Animations (@keyframes)
-  - Media Queries
-- ✅ **Google Fonts** - Orbitron, Rajdhani, Share Tech Mono
+## Project Structure
 
-## 📂 Project Structure
-```
-portfolio-website/
-├── 📄 index.html          # Main HTML file
-├── 🎨 styles.css          # All styles and animations
-└── 📖 README.md           # Project documentation
-```
-
-## 🎨 Design Features
-
-### 🌈 Color Palette
-```css
---neon-cyan:    #00f2ff;
---neon-pink:    #ff00ff;
---neon-purple:  #9d00ff;
---dark-bg:      #0a0a0c;
+```text
+My-Portfolio-Page/
+├── index.html
+├── styles.css
+├── css/
+│   ├── base.css
+│   ├── navbar.css
+│   ├── welcome.css
+│   ├── projects.css
+│   ├── skills.css
+│   ├── contact.css
+│   ├── components.css
+│   └── responsive.css
+├── js/
+│   ├── main.js
+│   ├── events.js
+│   ├── motion.js
+│   ├── ui.js
+│   └── projects.js
+├── assets/
+│   └── thumbnails/
+│       ├── solar-system-thumb.svg
+│       ├── libra-thumb.svg
+│       ├── breach-os-thumb.jpg
+│       ├── breach-engine-thumb.jpg
+│       ├── gea776-thumb.jpg
+│       └── glass-chess-thumb.svg
+└── README.md
 ```
 
-### 📍 Key Sections
-1. **🏠 Welcome Section** - Animated hero with glitch effects
-2. **💼 Projects Section** - Grid layout showcasing 6 projects
-3. **🛠️ Skills Section** - Animated progress bars
-4. **📧 Contact Section** - Social links with hover effects
+## Featured Projects
 
-## 📱 Responsive Design
+| Project | Link |
+|---------|------|
+| Solar System | [solar.laddtnov.xyz](https://solar.laddtnov.xyz/) |
+| Libra | [libra.laddtnov.xyz](https://libra.laddtnov.xyz/) |
+| Breach OS | [breachos.laddtnov.xyz](https://breachos.laddtnov.xyz/) |
+| Breach Engine | [breach-engine.laddtnov.xyz](https://breach-engine.laddtnov.xyz/) |
+| GEA776 | [gea776.laddtnov.xyz](https://gea776.laddtnov.xyz/) |
+| Glass Chess | [glass-chess.bynov.one](https://glass-chess.bynov.one/) |
 
-The website is fully responsive with breakpoints at:
+## Quick Start
 
-| Device | Breakpoint | Layout |
-|--------|-----------|--------|
-| 🖥️ Desktop | > 768px | Full grid layout |
-| 📱 Tablet | ≤ 768px | Stacked layout |
-| 📱 Mobile | ≤ 480px | Single column |
+1. Clone:
 
-## 🌟 Featured Projects
-
-| Project | Technologies | Link |
-|---------|-------------|------|
-| 🌌 Solar System Simulator | CSS Animations, Transform | [Live Demo](https://solar.laddtnov.xyz/) |
-| 🌃 Neo-Tokyo Times | CSS Grid, Variables | [View Project](#) |
-| 📚 Technical Documentation | Responsive, Media Queries | [View Project](#) |
-| 📖 Book Inventory System | Attribute Selectors, Tables | [View Project](#) |
-| 🛍️ Product Landing Page | CSS Grid Layout | [View Project](#) |
-| 🏛️ Tribute Page - Gaudí | Flexbox, Typography | [View Project](#) |
-
-## 🎓 Certification
-
-<div align="center">
-
-[![freeCodeCamp](https://img.shields.io/badge/Certification-freeCodeCamp-0A0A23?style=for-the-badge&logo=freecodecamp&logoColor=white)](https://www.freecodecamp.org/learn/2022/responsive-web-design/)
-
-This project is part of the **freeCodeCamp Responsive Web Design Certification**
-
-</div>
-
-## 🚀 Quick Start
-
-1. **Clone the repository**
 ```bash
-git clone https://github.com/laddtnov/portfolio-website.git
+git clone https://github.com/laddtnov/laddtnov-hub.git
 ```
 
-2. **Open in browser**
+2. Open the portfolio directory and run in a browser:
+
 ```bash
-cd portfolio-website
+cd laddtnov-hub
 open index.html
 ```
 
-That's it! No build process required. 🎉
+## Contact
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 📬 Connect With Me
-
-<div align="center">
-
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/laddtnov)
-[![Email](https://img.shields.io/badge/ProtonMail-8B89CC?style=for-the-badge&logo=protonmail&logoColor=white)](mailto:novytskiyvladislav@proton.me)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)
-
-</div>
-
----
-
-<div align="center">
-
-### 💜 Built with passion and CSS magic 💜
-
-⭐ **Star this repo if you like it!** ⭐
-
-</div>
+- GitHub: [@laddtnov](https://github.com/laddtnov)
+- LinkedIn: [linkedin.com/in/laddtnov](https://www.linkedin.com/in/laddtnov/)
+- Email: [novytskiyvladislav@proton.me](mailto:novytskiyvladislav@proton.me)

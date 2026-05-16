@@ -5,6 +5,50 @@
   z-index: 1;
 }
 
+.projects-explorer {
+  max-width: 1400px;
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-btn,
+.sort-select {
+  font-family: 'Share Tech Mono', monospace;
+  background: rgba(21, 21, 24, 0.85);
+  border: 1px solid rgba(0, 242, 255, 0.45);
+  color: var(--text-gray);
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.is-active,
+.sort-select:hover,
+.sort-select:focus-visible {
+  color: var(--neon-cyan);
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 16px rgba(0, 242, 255, 0.35);
+}
+
+.sort-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--neon-pink);
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -23,6 +67,10 @@
   color: var(--text-gray);
   display: flex;
   flex-direction: column;
+}
+
+.project-tile[hidden] {
+  display: none !important;
 }
 
 .project-tile:hover {
@@ -102,4 +150,101 @@
 .project-desc {
   color: var(--text-gray);
   line-height: 1.6;
+}
+
+.project-actions {
+  margin-top: auto;
+  padding-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.project-visit-btn,
+.project-inspect-btn {
+  font-family: 'Share Tech Mono', monospace;
+  border: 1px solid var(--neon-cyan);
+  background: transparent;
+  color: var(--neon-cyan);
+  border-radius: 5px;
+  padding: 8px 12px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.project-inspect-btn {
+  border-color: var(--neon-pink);
+  color: var(--neon-pink);
+}
+
+.project-visit-btn:hover,
+.project-inspect-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(0, 242, 255, 0.35);
+}
+
+.project-inspect-btn:hover {
+  box-shadow: 0 0 16px rgba(255, 0, 255, 0.35);
+}
+
+.project-modal {
+  position: relative;
+  width: min(92vw, 620px);
+  border: 2px solid var(--neon-cyan);
+  border-radius: 10px;
+  padding: 24px;
+  background: linear-gradient(160deg, rgba(10, 10, 12, 0.98), rgba(17, 17, 22, 0.96));
+  color: var(--text-gray);
+  box-shadow: 0 0 36px rgba(0, 242, 255, 0.3);
+}
+
+.project-modal::backdrop {
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(2px);
+}
+
+.project-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: 1px solid var(--neon-pink);
+  background: transparent;
+  color: var(--neon-pink);
+  font-size: 1.2rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.project-modal-label {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--neon-cyan);
+  margin-bottom: 10px;
+}
+
+.project-modal h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.project-modal-tech {
+  color: var(--neon-pink);
+  font-family: 'Share Tech Mono', monospace;
+  margin-bottom: 12px;
+}
+
+.project-modal-desc {
+  margin-bottom: 10px;
+}
+
+.project-modal-summary {
+  color: #b8b8b8;
+  margin-bottom: 18px;
+}
+
+.project-modal-actions {
+  display: flex;
+  justify-content: flex-start;
 }

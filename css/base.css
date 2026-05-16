@@ -21,6 +21,33 @@ body {
   overflow-x: hidden;
 }
 
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  transform: translateY(-160%);
+  background: #000;
+  color: var(--neon-cyan);
+  border: 2px solid var(--neon-cyan);
+  padding: 8px 12px;
+  text-decoration: none;
+  font-family: 'Share Tech Mono', monospace;
+  z-index: 10001;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--neon-cyan);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(0, 242, 255, 0.2);
+}
+
 .cyber-grid {
   position: fixed;
   top: 0;
@@ -54,4 +81,25 @@ body {
 .title-bracket {
   color: var(--neon-pink);
   font-family: 'Share Tech Mono', monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .cyber-grid,
+  .status-dot,
+  .scroll-indicator {
+    animation: none !important;
+  }
 }

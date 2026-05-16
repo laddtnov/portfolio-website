@@ -68,6 +68,23 @@
     grid-template-columns: 1fr;
     padding: 0 10px;
   }
+
+  .projects-explorer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-group {
+    justify-content: center;
+  }
+
+  .sort-wrap {
+    justify-content: center;
+  }
+
+  .project-actions {
+    flex-direction: column;
+  }
   
   /* Reducing section padding to save vertical space */
   #projects,
