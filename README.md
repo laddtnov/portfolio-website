@@ -73,7 +73,7 @@ My-Portfolio-Page/
 
 | Project | Link |
 |---------|------|
-| Solar System | [solar.laddtnov.xyz](https://solar.laddtnov.xyz/) |
+| Orrery | [orrery.laddtnov.xyz](https://orrery.laddtnov.xyz/) |
 | Libra | [libra.laddtnov.xyz](https://libra.laddtnov.xyz/) |
 | Breach OS | [breachos.laddtnov.xyz](https://breachos.laddtnov.xyz/) |
 | Cogsworth | [cogsworth.laddtnov.xyz](https://cogsworth.laddtnov.xyz/) |
