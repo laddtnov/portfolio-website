@@ -76,9 +76,9 @@ My-Portfolio-Page/
 | Solar System | [solar.laddtnov.xyz](https://solar.laddtnov.xyz/) |
 | Libra | [libra.laddtnov.xyz](https://libra.laddtnov.xyz/) |
 | Breach OS | [breachos.laddtnov.xyz](https://breachos.laddtnov.xyz/) |
-| Breach Engine | [breach-engine.laddtnov.xyz](https://breach-engine.laddtnov.xyz/) |
+| Cogsworth | [cogsworth.laddtnov.xyz](https://cogsworth.laddtnov.xyz/) |
 | GEA776 | [gea776.laddtnov.xyz](https://gea776.laddtnov.xyz/) |
-| Glass Chess | [glass-chess.bynov.one](https://glass-chess.bynov.one/) |
+| Vitrum | [vitrum.bynov.one](https://vitrum.bynov.one/) |
 
 ## Quick Start
 

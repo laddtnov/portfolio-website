@@ -23,5 +23,6 @@
 - [x] Analytics (localStorage event recording)
 - [x] Hero CTA buttons
 - [x] Impact metrics on project cards
-- [x] Content polish (Breach OS tags, Breach Engine title, GEA776 desc)
-- [x] Custom domain links (glass-chess.bynov.one)
+- [x] Content polish (Breach OS tags, Cogsworth title, GEA776 desc)
+- [x] Custom domain links (vitrum.bynov.one, cogsworth.laddtnov.xyz)
+- [x] Renamed Glass Chess → Vitrum, Breach Engine → Cogsworth
