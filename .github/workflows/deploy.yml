@@ -2,12 +2,9 @@ name: Deploy Portfolio to Vercel
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
-
-permissions:
-  contents: read
+    branches: [main]
 
 jobs:
   build-check:
@@ -15,28 +12,26 @@ jobs:
     runs-on: ubuntu-latest
     name: Build Check
     permissions:
-      contents: read
-      issues: write
-    
+      pull-requests: write
+
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
-      
+          node-version: "20"
+          cache: "npm"
+
       - name: Install dependencies
-        run: npm install
-      
+        run: npm ci
+
       - name: Build
-        continue-on-error: true
-        run: npm run build || echo "Build completed"
-      
+        run: npm run build
+
       - name: Comment on PR
         uses: actions/github-script@v7
         with:
           script: |
-            github.rest.issues.createComment({
+            await github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -47,24 +42,25 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     name: Deploy to Vercel
-    
+
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-      
+          node-version: "20"
+          cache: "npm"
+
       - name: Deploy Portfolio
         run: |
-          npm install -g vercel
+          npm install -g vercel@latest
           vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }} --yes
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-      
+
       - name: ✅ Deployment Success
         run: echo "🌐 Portfolio live at laddtnov.xyz"
-      
+
       - name: ❌ Deployment Failed
         if: failure()
         run: echo "Check logs above"
